@@ -36,11 +36,12 @@ table {
   border-spacing: 0; }
 
 * {
-  box-sizing: border-box !important; }
+  box-sizing: border-box !important;
+  -webkit-font-smoothing: antialiased; }
 
 html, body {
   font-family: 'Lato', sans-serif;
-  letter-spacing: 1px;
+  letter-spacing: 0px;
   background: #424242;
   font-size: 16px; }
   html .globalCont, body .globalCont {
@@ -79,15 +80,16 @@ html, body {
       html .globalCont .sections .section h4, body .globalCont .sections .section h4 {
         color: #FFF;
         opacity: 0.4;
-        margin-top: 1rem;
+        letter-spacing: 4px;
+        margin-top: 0rem;
         margin-bottom: 1rem;
         text-transform: uppercase; }
       html .globalCont .sections .section[data-name="intro"], body .globalCont .sections .section[data-name="intro"] {
         background: #f01799; }
         html .globalCont .sections .section[data-name="intro"] p, body .globalCont .sections .section[data-name="intro"] p {
           color: #FFF;
-          max-width: 640px;
-          padding: 4rem 1rem;
+          max-width: 600px;
+          padding: 2rem 1rem;
           font-size: 2rem;
           line-height: 2.4rem;
           display: inline-block; }
@@ -97,10 +99,10 @@ html, body {
         padding-bottom: 2rem; }
         html .globalCont .sections .section[data-name="about"] p, body .globalCont .sections .section[data-name="about"] p {
           color: #FFF;
-          max-width: 640px;
+          max-width: 600px;
           padding: 1rem 1rem;
-          font-size: 1.6rem;
-          font-weight: 300;
+          font-size: 1.2rem;
+          font-weight: 400;
           line-height: 2.4rem;
           display: inline-block; }
           html .globalCont .sections .section[data-name="about"] p .b, body .globalCont .sections .section[data-name="about"] p .b {
@@ -108,15 +110,14 @@ html, body {
             font-weight: bold; }
       html .globalCont .sections .section[data-name="contact"], body .globalCont .sections .section[data-name="contact"] {
         background: #424242;
-        height: 40rem;
         padding-top: 2rem;
-        padding-bottom: 2rem; }
+        padding-bottom: 20rem; }
         html .globalCont .sections .section[data-name="contact"] p, body .globalCont .sections .section[data-name="contact"] p {
           color: #FFF;
-          max-width: 640px;
+          max-width: 600px;
           margin-top: 1rem;
           font-size: 1rem;
-          font-weight: 300;
+          font-weight: 400;
           line-height: 2rem;
           display: inline-block;
           padding: 0rem 1rem; }
@@ -124,15 +125,15 @@ html, body {
             display: inline;
             font-weight: bold; }
           html .globalCont .sections .section[data-name="contact"] p:nth-child(2), body .globalCont .sections .section[data-name="contact"] p:nth-child(2) {
-            font-size: 1.8rem;
-            line-height: 2.6rem; }
+            font-size: 1.4rem;
+            line-height: 2rem; }
         html .globalCont .sections .section[data-name="contact"] form, body .globalCont .sections .section[data-name="contact"] form {
           margin: auto;
-          margin-top: 3rem;
+          margin-top: 2rem;
+          padding-top: 2rem;
           width: 100%;
-          max-width: 640px;
-          border-top: 1px solid #333;
-          padding-top: 3rem; }
+          max-width: 600px;
+          border-top: 1px solid #333; }
           html .globalCont .sections .section[data-name="contact"] form input, html .globalCont .sections .section[data-name="contact"] form button, body .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form button {
             vertical-align: top;
             border: none;
@@ -145,10 +146,381 @@ html, body {
           html .globalCont .sections .section[data-name="contact"] form button[type="submit"], body .globalCont .sections .section[data-name="contact"] form button[type="submit"] {
             display: inline-block;
             border: none;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: bold;
             padding: 0.4rem 2rem;
             background: #3ca83c;
             color: #FFF; }
             html .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover, body .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover {
               background: #2f822f;
               cursor: pointer; }
+
+@media (min-width: 320px) and (max-width: 640px) {
+  html, body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0px;
+    background: #424242;
+    font-size: 16px; }
+    html .globalCont, body .globalCont {
+      text-align: center; }
+      html .globalCont .headerBack, body .globalCont .headerBack {
+        height: 6rem;
+        line-height: 6rem;
+        background: #FFF;
+        position: absolute;
+        width: 100%;
+        top: 0rem;
+        left: 0rem; }
+      html .globalCont .header, body .globalCont .header {
+        height: 6rem;
+        line-height: 6rem;
+        position: fixed;
+        width: 100%;
+        top: 0rem;
+        left: 0rem; }
+        html .globalCont .header a.logo, body .globalCont .header a.logo {
+          display: inline-block;
+          background: #396caa;
+          padding: 0.4rem 1rem;
+          text-decoration: none;
+          border-bottom: 4px solid #f01799;
+          vertical-align: middle;
+          line-height: normal; }
+          html .globalCont .header a.logo .name, body .globalCont .header a.logo .name {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 2rem; }
+        html .globalCont .header.bg, body .globalCont .header.bg {
+          background: rgba(0, 0, 0, 0.1); }
+      html .globalCont .sections, body .globalCont .sections {
+        margin-top: 6rem; }
+        html .globalCont .sections .section h4, body .globalCont .sections .section h4 {
+          color: #FFF;
+          opacity: 0.4;
+          letter-spacing: 4px;
+          margin-top: 0rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase; }
+        html .globalCont .sections .section[data-name="intro"], body .globalCont .sections .section[data-name="intro"] {
+          background: #f01799; }
+          html .globalCont .sections .section[data-name="intro"] p, body .globalCont .sections .section[data-name="intro"] p {
+            color: #FFF;
+            max-width: 100%;
+            padding: 2rem 1rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            display: inline-block; }
+        html .globalCont .sections .section[data-name="about"], body .globalCont .sections .section[data-name="about"] {
+          background: #2c5484;
+          padding-top: 2rem;
+          padding-bottom: 2rem; }
+          html .globalCont .sections .section[data-name="about"] p, body .globalCont .sections .section[data-name="about"] p {
+            color: #FFF;
+            max-width: 100%;
+            padding: 1rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            display: inline-block; }
+            html .globalCont .sections .section[data-name="about"] p .b, body .globalCont .sections .section[data-name="about"] p .b {
+              display: inline;
+              font-weight: bold; }
+        html .globalCont .sections .section[data-name="contact"], body .globalCont .sections .section[data-name="contact"] {
+          background: #424242;
+          padding-top: 2rem;
+          padding-bottom: 20rem; }
+          html .globalCont .sections .section[data-name="contact"] p, body .globalCont .sections .section[data-name="contact"] p {
+            color: #FFF;
+            max-width: 100%;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 2rem;
+            display: inline-block;
+            padding: 0rem 1rem; }
+            html .globalCont .sections .section[data-name="contact"] p .b, body .globalCont .sections .section[data-name="contact"] p .b {
+              display: inline;
+              font-weight: bold; }
+            html .globalCont .sections .section[data-name="contact"] p:nth-child(2), body .globalCont .sections .section[data-name="contact"] p:nth-child(2) {
+              font-size: 1.4rem;
+              line-height: 2rem; }
+          html .globalCont .sections .section[data-name="contact"] form, body .globalCont .sections .section[data-name="contact"] form {
+            margin: auto;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            width: 100%;
+            max-width: 100%;
+            border-top: 1px solid #333; }
+            html .globalCont .sections .section[data-name="contact"] form input, html .globalCont .sections .section[data-name="contact"] form button, body .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form button {
+              vertical-align: top;
+              border: none;
+              height: 4rem; }
+            html .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form input {
+              padding: 0.6rem 2rem;
+              width: 100%;
+              max-width: 16rem;
+              font-size: 1.2rem; }
+            html .globalCont .sections .section[data-name="contact"] form button[type="submit"], body .globalCont .sections .section[data-name="contact"] form button[type="submit"] {
+              display: inline-block;
+              border: none;
+              font-size: 1.2rem;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 0.4rem 2rem;
+              background: #3ca83c;
+              color: #FFF; }
+              html .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover, body .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover {
+                background: #2f822f;
+                cursor: pointer; }
+
+  br {
+    display: none !important; }
+
+  .section[data-name="contact"] {
+    padding-bottom: 0rem !important; }
+
+  form {
+    border-top: none !important;
+    margin-top: 0rem !important; }
+    form input, form button {
+      width: 100% !important;
+      max-width: 100% !important; } }
+@media (min-width: 641px) and (max-width: 1440px) {
+  html, body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0px;
+    background: #424242;
+    font-size: 16px; }
+    html .globalCont, body .globalCont {
+      text-align: center; }
+      html .globalCont .headerBack, body .globalCont .headerBack {
+        height: 6rem;
+        line-height: 6rem;
+        background: #FFF;
+        position: absolute;
+        width: 100%;
+        top: 0rem;
+        left: 0rem; }
+      html .globalCont .header, body .globalCont .header {
+        height: 6rem;
+        line-height: 6rem;
+        position: fixed;
+        width: 100%;
+        top: 0rem;
+        left: 0rem; }
+        html .globalCont .header a.logo, body .globalCont .header a.logo {
+          display: inline-block;
+          background: #396caa;
+          padding: 0.4rem 1rem;
+          text-decoration: none;
+          border-bottom: 4px solid #f01799;
+          vertical-align: middle;
+          line-height: normal; }
+          html .globalCont .header a.logo .name, body .globalCont .header a.logo .name {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 2rem; }
+        html .globalCont .header.bg, body .globalCont .header.bg {
+          background: rgba(0, 0, 0, 0.1); }
+      html .globalCont .sections, body .globalCont .sections {
+        margin-top: 6rem; }
+        html .globalCont .sections .section h4, body .globalCont .sections .section h4 {
+          color: #FFF;
+          opacity: 0.4;
+          letter-spacing: 4px;
+          margin-top: 0rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase; }
+        html .globalCont .sections .section[data-name="intro"], body .globalCont .sections .section[data-name="intro"] {
+          background: #f01799; }
+          html .globalCont .sections .section[data-name="intro"] p, body .globalCont .sections .section[data-name="intro"] p {
+            color: #FFF;
+            max-width: 600px;
+            padding: 2rem 1rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            display: inline-block; }
+        html .globalCont .sections .section[data-name="about"], body .globalCont .sections .section[data-name="about"] {
+          background: #2c5484;
+          padding-top: 2rem;
+          padding-bottom: 2rem; }
+          html .globalCont .sections .section[data-name="about"] p, body .globalCont .sections .section[data-name="about"] p {
+            color: #FFF;
+            max-width: 600px;
+            padding: 1rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            display: inline-block; }
+            html .globalCont .sections .section[data-name="about"] p .b, body .globalCont .sections .section[data-name="about"] p .b {
+              display: inline;
+              font-weight: bold; }
+        html .globalCont .sections .section[data-name="contact"], body .globalCont .sections .section[data-name="contact"] {
+          background: #424242;
+          padding-top: 2rem;
+          padding-bottom: 20rem; }
+          html .globalCont .sections .section[data-name="contact"] p, body .globalCont .sections .section[data-name="contact"] p {
+            color: #FFF;
+            max-width: 600px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 2rem;
+            display: inline-block;
+            padding: 0rem 1rem; }
+            html .globalCont .sections .section[data-name="contact"] p .b, body .globalCont .sections .section[data-name="contact"] p .b {
+              display: inline;
+              font-weight: bold; }
+            html .globalCont .sections .section[data-name="contact"] p:nth-child(2), body .globalCont .sections .section[data-name="contact"] p:nth-child(2) {
+              font-size: 1.4rem;
+              line-height: 2rem; }
+          html .globalCont .sections .section[data-name="contact"] form, body .globalCont .sections .section[data-name="contact"] form {
+            margin: auto;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            width: 100%;
+            max-width: 600px;
+            border-top: 1px solid #333; }
+            html .globalCont .sections .section[data-name="contact"] form input, html .globalCont .sections .section[data-name="contact"] form button, body .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form button {
+              vertical-align: top;
+              border: none;
+              height: 4rem; }
+            html .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form input {
+              padding: 0.6rem 2rem;
+              width: 100%;
+              max-width: 16rem;
+              font-size: 1.2rem; }
+            html .globalCont .sections .section[data-name="contact"] form button[type="submit"], body .globalCont .sections .section[data-name="contact"] form button[type="submit"] {
+              display: inline-block;
+              border: none;
+              font-size: 1.2rem;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 0.4rem 2rem;
+              background: #3ca83c;
+              color: #FFF; }
+              html .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover, body .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover {
+                background: #2f822f;
+                cursor: pointer; } }
+@media (min-width: 1441px) {
+  html, body {
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0px;
+    background: #424242;
+    font-size: 20px; }
+    html .globalCont, body .globalCont {
+      text-align: center; }
+      html .globalCont .headerBack, body .globalCont .headerBack {
+        height: 6rem;
+        line-height: 6rem;
+        background: #FFF;
+        position: absolute;
+        width: 100%;
+        top: 0rem;
+        left: 0rem; }
+      html .globalCont .header, body .globalCont .header {
+        height: 6rem;
+        line-height: 6rem;
+        position: fixed;
+        width: 100%;
+        top: 0rem;
+        left: 0rem; }
+        html .globalCont .header a.logo, body .globalCont .header a.logo {
+          display: inline-block;
+          background: #396caa;
+          padding: 0.4rem 1rem;
+          text-decoration: none;
+          border-bottom: 4px solid #f01799;
+          vertical-align: middle;
+          line-height: normal; }
+          html .globalCont .header a.logo .name, body .globalCont .header a.logo .name {
+            color: #FFF;
+            text-decoration: none;
+            font-size: 2rem; }
+        html .globalCont .header.bg, body .globalCont .header.bg {
+          background: rgba(0, 0, 0, 0.1); }
+      html .globalCont .sections, body .globalCont .sections {
+        margin-top: 6rem; }
+        html .globalCont .sections .section h4, body .globalCont .sections .section h4 {
+          color: #FFF;
+          opacity: 0.4;
+          letter-spacing: 4px;
+          margin-top: 0rem;
+          margin-bottom: 1rem;
+          text-transform: uppercase; }
+        html .globalCont .sections .section[data-name="intro"], body .globalCont .sections .section[data-name="intro"] {
+          background: #f01799; }
+          html .globalCont .sections .section[data-name="intro"] p, body .globalCont .sections .section[data-name="intro"] p {
+            color: #FFF;
+            max-width: 740px;
+            padding: 2rem 1rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
+            display: inline-block; }
+        html .globalCont .sections .section[data-name="about"], body .globalCont .sections .section[data-name="about"] {
+          background: #2c5484;
+          padding-top: 2rem;
+          padding-bottom: 2rem; }
+          html .globalCont .sections .section[data-name="about"] p, body .globalCont .sections .section[data-name="about"] p {
+            color: #FFF;
+            max-width: 740px;
+            padding: 1rem 1rem;
+            font-size: 1.2rem;
+            font-weight: 400;
+            line-height: 2.4rem;
+            display: inline-block; }
+            html .globalCont .sections .section[data-name="about"] p .b, body .globalCont .sections .section[data-name="about"] p .b {
+              display: inline;
+              font-weight: bold; }
+        html .globalCont .sections .section[data-name="contact"], body .globalCont .sections .section[data-name="contact"] {
+          background: #424242;
+          padding-top: 2rem;
+          padding-bottom: 20rem; }
+          html .globalCont .sections .section[data-name="contact"] p, body .globalCont .sections .section[data-name="contact"] p {
+            color: #FFF;
+            max-width: 740px;
+            margin-top: 1rem;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 2rem;
+            display: inline-block;
+            padding: 0rem 1rem; }
+            html .globalCont .sections .section[data-name="contact"] p .b, body .globalCont .sections .section[data-name="contact"] p .b {
+              display: inline;
+              font-weight: bold; }
+            html .globalCont .sections .section[data-name="contact"] p:nth-child(2), body .globalCont .sections .section[data-name="contact"] p:nth-child(2) {
+              font-size: 1.4rem;
+              line-height: 2rem; }
+          html .globalCont .sections .section[data-name="contact"] form, body .globalCont .sections .section[data-name="contact"] form {
+            margin: auto;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            width: 100%;
+            max-width: 740px;
+            border-top: 1px solid #333; }
+            html .globalCont .sections .section[data-name="contact"] form input, html .globalCont .sections .section[data-name="contact"] form button, body .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form button {
+              vertical-align: top;
+              border: none;
+              height: 4rem; }
+            html .globalCont .sections .section[data-name="contact"] form input, body .globalCont .sections .section[data-name="contact"] form input {
+              padding: 0.6rem 2rem;
+              width: 100%;
+              max-width: 16rem;
+              font-size: 1.2rem; }
+            html .globalCont .sections .section[data-name="contact"] form button[type="submit"], body .globalCont .sections .section[data-name="contact"] form button[type="submit"] {
+              display: inline-block;
+              border: none;
+              font-size: 1.2rem;
+              letter-spacing: 2px;
+              text-transform: uppercase;
+              font-weight: bold;
+              padding: 0.4rem 2rem;
+              background: #3ca83c;
+              color: #FFF; }
+              html .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover, body .globalCont .sections .section[data-name="contact"] form button[type="submit"]:hover {
+                background: #2f822f;
+                cursor: pointer; } }

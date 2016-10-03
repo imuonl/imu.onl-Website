@@ -7,49 +7,71 @@ $darkgray: #424242;
 
 $headerColor: rgba(0,0,0,0.1);
 
-* { box-sizing: border-box !important; }
-html, body { font-family: 'Lato', sans-serif; letter-spacing: 1px; background: $darkgray; font-size: 16px;
-	.globalCont { text-align: center;
-		.headerBack { height: 6rem; line-height:6rem; background: #FFF; position: absolute; width: 100%; top: 0rem; left: 0rem; }
-		.header { height: 6rem; line-height:6rem; position: fixed; width: 100%; top: 0rem; left: 0rem;
-			a.logo { display: inline-block; background: $blue; padding: 0.4rem 1rem; text-decoration: none; border-bottom: 4px solid $pink; vertical-align: middle; line-height: normal;
-				.name { color: #FFF; text-decoration: none; font-size: 2rem; }
-			}
-			
-			&.bg { background: $headerColor; }
-		}
+* { box-sizing: border-box !important; -webkit-font-smoothing: antialiased; }
 
-		.sections { margin-top: 6rem;
-			.section {
+@mixin site($fontBase, $contentWidth) {
+	html, body { font-family: 'Lato', sans-serif; letter-spacing: 0px; background: $darkgray; font-size: $fontBase;
+		.globalCont { text-align: center;
+			.headerBack { height: 6rem; line-height:6rem; background: #FFF; position: absolute; width: 100%; top: 0rem; left: 0rem; }
+			.header { height: 6rem; line-height:6rem; position: fixed; width: 100%; top: 0rem; left: 0rem;
+				a.logo { display: inline-block; background: $blue; padding: 0.4rem 1rem; text-decoration: none; border-bottom: 4px solid $pink; vertical-align: middle; line-height: normal;
+					.name { color: #FFF; text-decoration: none; font-size: 2rem; }
+				}
 				
-				h4 { color: #FFF; opacity: 0.4; margin-top: 1rem; margin-bottom: 1rem; text-transform: uppercase; } 
+				&.bg { background: $headerColor; }
+			}
 
-				&[data-name="intro"] { background: $pink;
-					p { color: #FFF; max-width: 640px; padding: 4rem 1rem; font-size: 2rem; line-height: 2.4rem; display: inline-block; }
-				}
+			.sections { margin-top: 6rem;
+				.section {
+					
+					h4 { color: #FFF; opacity: 0.4; letter-spacing: 4px; margin-top: 0rem; margin-bottom: 1rem; text-transform: uppercase; } 
 
-				&[data-name="about"] { background: darken($blue, 10%); padding-top: 2rem; padding-bottom: 2rem;
-					p { color: #FFF; max-width: 640px; padding: 1rem 1rem; font-size: 1.6rem; font-weight: 300; line-height: 2.4rem; display: inline-block;
-						.b { display: inline; font-weight: bold; }
+					&[data-name="intro"] { background: $pink;
+						p { color: #FFF; max-width: $contentWidth; padding: 2rem 1rem; font-size: 2rem; line-height: 2.4rem; display: inline-block; }
 					}
-				}
 
-				&[data-name="contact"] { background: $darkgray; height: 40rem; padding-top: 2rem; padding-bottom: 2rem;
-					p { color: #FFF; max-width: 640px; margin-top: 1rem; font-size: 1rem; font-weight: 300; line-height: 2rem; display: inline-block; padding: 0rem 1rem;
-						.b { display: inline; font-weight: bold; }
-
-						&:nth-child(2) { font-size: 1.8rem; line-height: 2.6rem; }
+					&[data-name="about"] { background: darken($blue, 10%); padding-top: 2rem; padding-bottom: 2rem;
+						p { color: #FFF; max-width: $contentWidth; padding: 1rem 1rem; font-size: 1.2rem; font-weight: 400; line-height: 2.4rem; display: inline-block;
+							.b { display: inline; font-weight: bold; }
+						}
 					}
-					form { margin: auto; margin-top: 3rem; width: 100%; max-width: 640px; border-top: 1px solid #333; padding-top: 3rem;
-						input, button { vertical-align: top; border: none; height: 4rem; }
 
-						input { padding: 0.6rem 2rem; width: 100%; max-width: 16rem; font-size: 1.2rem; }
-						button[type="submit"] { display: inline-block; border: none; font-size: 1.4rem; padding: 0.4rem 2rem; background: $green; color: #FFF;
-							&:hover { background: darken($green, 10%); cursor: pointer; } 
+					&[data-name="contact"] { background: $darkgray; padding-top: 2rem; padding-bottom: 20rem;
+						p { color: #FFF; max-width: $contentWidth; margin-top: 1rem; font-size: 1rem; font-weight: 400; line-height: 2rem; display: inline-block; padding: 0rem 1rem;
+							.b { display: inline; font-weight: bold; }
+
+							&:nth-child(2) { font-size: 1.4rem; line-height: 2rem; }
+						}
+						form { margin: auto; margin-top: 2rem; padding-top: 2rem; width: 100%; max-width: $contentWidth; border-top: 1px solid #333;
+							input, button { vertical-align: top; border: none; height: 4rem; }
+
+							input { padding: 0.6rem 2rem; width: 100%; max-width: 16rem; font-size: 1.2rem; }
+							button[type="submit"] { display: inline-block; border: none; font-size: 1.2rem; letter-spacing: 2px; text-transform: uppercase; font-weight: bold; padding: 0.4rem 2rem; background: $green; color: #FFF;
+								&:hover { background: darken($green, 10%); cursor: pointer; } 
+							}
 						}
 					}
 				}
 			}
 		}
 	}
+}
+
+@include site(16px, 600px);
+
+@media(min-width: 320px) and (max-width: 640px) {
+	@include site(16px, 100%);
+	br { display: none !important; }
+	.section[data-name="contact"] { padding-bottom: 0rem !important; }
+	form { border-top: none !important; margin-top: 0rem !important;
+		input, button { width: 100% !important; max-width: 100% !important; }
+	}
+}
+
+@media (min-width: 641px) and (max-width: 1440px) {
+	@include site(16px, 600px);
+}
+
+@media(min-width: 1441px) {
+	@include site(20px, 740px);
 }

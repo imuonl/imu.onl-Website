@@ -14,6 +14,8 @@ block content
 				| we can't wait to let you know about.
 			br
 			p To stay updated, please enter your email adress. We won't give it to the illuminati or spam you, but we'll definitely keep you updated with progress, community involvements and most importantly, how you can help.
-			form.emailForm
-				input(type="email" placeholder="Your Email Address")
+			form.emailForm(method='post')
+				label.msg Thanks for signing up! We'll keep you posted.
+				input(type='hidden', name='action', value='catchEmail')
+				input(type="email" placeholder="Your Email Address" name="email" required)
 				button(type="submit") sign meme up!

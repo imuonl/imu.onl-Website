@@ -1,0 +1,17 @@
+extends ../layouts/default
+
+block content
+	.sections
+		.section(data-name="intro")
+			p It's only human nature to work together.
+		.section(data-name="about")
+			h4 mission
+			p Whether it's memes, satire or alternative content, we'd like to make it #[span.b easier] to make #[span.b better], more #[span.b well informed decisions] about your brand and we'd like to do it #[span.b open source].
+		.section(data-name="contact")
+			h4 join the cause
+			p We're working on some exciting projects that we can't wait to let you know about.
+			br
+			p To stay updated, please enter your email adress. We won't give it to the illuminati or spam you, but we'll definitely keep you updated with progress, community involvements and most importantly, how you can help.
+			form.emailForm
+				input(type="email" placeholder="Your Email Address")
+				button(type="submit") sign meme up!

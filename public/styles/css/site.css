@@ -56,7 +56,6 @@ html, body {
     html .globalCont .header, body .globalCont .header {
       height: 6rem;
       line-height: 6rem;
-      background: rgba(0, 0, 0, 0.1);
       position: fixed;
       width: 100%;
       top: 0rem;
@@ -73,6 +72,8 @@ html, body {
           color: #FFF;
           text-decoration: none;
           font-size: 2rem; }
+      html .globalCont .header.bg, body .globalCont .header.bg {
+        background: rgba(0, 0, 0, 0.1); }
     html .globalCont .sections, body .globalCont .sections {
       margin-top: 6rem; }
       html .globalCont .sections .section h4, body .globalCont .sections .section h4 {

@@ -11,13 +11,12 @@ $headerColor: rgba(0,0,0,0.1);
 html, body { font-family: 'Lato', sans-serif; letter-spacing: 1px; background: $darkgray; font-size: 16px;
 	.globalCont { text-align: center;
 		.headerBack { height: 6rem; line-height:6rem; background: #FFF; position: absolute; width: 100%; top: 0rem; left: 0rem; }
-		.header { height: 6rem; line-height:6rem; background: $headerColor; position: fixed; width: 100%; top: 0rem; left: 0rem;
+		.header { height: 6rem; line-height:6rem; position: fixed; width: 100%; top: 0rem; left: 0rem;
 			a.logo { display: inline-block; background: $blue; padding: 0.4rem 1rem; text-decoration: none; border-bottom: 4px solid $pink; vertical-align: middle; line-height: normal;
 				.name { color: #FFF; text-decoration: none; font-size: 2rem; }
 			}
-			.inner { 
-				
-			}
+			
+			&.bg { background: $headerColor; }
 		}
 
 		.sections { margin-top: 6rem;

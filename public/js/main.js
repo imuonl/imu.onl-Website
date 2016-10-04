@@ -18,6 +18,8 @@ $(function() {
 		var $input = $(this).find('input');
 		var $button = $(this).find('button');
 
+		$('.msg').removeClass('show');
+
 		$input.addClass('hide');
 		$button.attr('disabled', 'true')
 		$button.text('working..');
